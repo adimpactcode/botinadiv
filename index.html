@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern AI Bot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="center-div">
+    <iframe class="webchatIframe"
+            srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+            <script>
+              window.botpressWebChat.init({
+                'composerPlaceholder': 'Chat with our AI',
+                'botConversationDescription': 'Get your queries resolved with our AI assistant.',
+                'botName': 'AI Assistant',
+                'botId': 'your-bot-id',
+                'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+                'messagingUrl': 'https://messaging.botpress.cloud',
+                'clientId': 'your-client-id',
+                'enableConversationDeletion': true,
+                'showPoweredBy': false,
+                'className': 'webchatIframe',
+                'containerWidth': '100%',
+                'layoutWidth': '100%',
+                'hideWidget': true,
+                'showCloseButton': true,
+                'disableAnimations': false,
+                'closeOnEscape': true,
+                'showConversationsButton': true,
+                'enableTranscriptDownload': true,
+                'stylesheet':'https://webchat-styler-css.botpress.app/prod/code/3fcd3e4e-d5bc-4bf5-8699-14b621b3ada2/v31782/style.css'
+              });
+              window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({type: 'show'}); }, ['LIFECYCLE.LOADED']);
+            </script></body>"
+            width="100%"
+            height="100%">
+    </iframe>
+  </div>
+</body>
+</html>
